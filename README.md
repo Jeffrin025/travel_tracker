@@ -19,7 +19,7 @@ Run the installer and follow the setup instructions. 📦
 Launch pgAdmin:
 Open pgAdmin from your applications or start menu. You might need to set up an initial user and password. 🔑
 
-3.run
+3.run the code using these commands 
 npm i ,nodemon index.js
 
 
