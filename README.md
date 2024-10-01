@@ -20,7 +20,7 @@ Launch pgAdmin:
 Open pgAdmin from your applications or start menu. You might need to set up an initial user and password. 🔑
 
 3.run
-npm i 
-npm i nodemon
-nodemon index.js
+npm i ,nodemon index.js
+
+
 
