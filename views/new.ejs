@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New User</title>
+  <style>
+    body {
+    
+      background: linear-gradient(to bottom, #000000, #434343);
+      color: white; 
+      font-family: Arial, sans-serif; 
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.1); 
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 100%; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #000;
+    }
+
+    button {
+      background-color: #555;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%; 
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    label {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    label:hover span {
+      transform: scale(1.25);
+    }
+
+    label span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.2s ease-in-out;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .olive {
+      background-color: olive;
+    }
+
+    .orange {
+      background-color: orange;
+    }
+
+    .teal {
+      background-color: indigo;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .violet {
+      background-color: violet;
+    }
+
+    .purple {
+      background-color: purple;
+    }
+
+    .pink {
+      background-color: pink;
+    }
+
+    input[type="radio"]:checked + label span {
+      transform: scale(1.25);
+      border: 2px solid white; 
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Add Member</h1>
+  <form action="/new" method="post">
+    <p>What's your name?</p>
+    <input type="text" name="name">
+
+    <p>Pick a color:</p>
+    <input type="radio" name="color" id="red" value="red" />
+    <label for="red"><span class="red"></span></label>
+
+    <input type="radio" name="color" id="green" value="green" />
+    <label for="green"><span class="green"></span></label>
+
+    <input type="radio" name="color" id="yellow" value="yellow" />
+    <label for="yellow"><span class="yellow"></span></label>
+
+    <input type="radio" name="color" id="olive" value="olive" />
+    <label for="olive"><span class="olive"></span></label>
+
+    <input type="radio" name="color" id="orange" value="orange" />
+    <label for="orange"><span class="orange"></span></label>
+
+    <input type="radio" name="color" id="teal" value="indigo" />
+    <label for="teal"><span class="teal"></span></label>
+
+    <input type="radio" name="color" id="blue" value="blue" />
+    <label for="blue"><span class="blue"></span></label>
+
+    <input type="radio" name="color" id="violet" value="violet" />
+    <label for="violet"><span class="violet"></span></label>
+
+    <input type="radio" name="color" id="purple" value="purple" />
+    <label for="purple"><span class="purple"></span></label>
+
+    <input type="radio" name="color" id="pink" value="pink" />
+    <label for="pink"><span class="pink"></span></label>
+    <div class="spacer"></div>
+    <button type="submit">Add</button>
+  </form>
+</body>
+
+</html>

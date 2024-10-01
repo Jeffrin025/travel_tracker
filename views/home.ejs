@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Tracker</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<style>
+  body {
+    background: linear-gradient(135deg, #83a4d4 0%, #b6fbff 100%);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .jumbotron {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 80px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+
+  p.lead {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    font-size: 1em;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-light {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+  }
+
+  .btn-dark {
+    background-color: #bdc3c7;
+    color: #2c3e50;
+    border: none;
+  }
+
+  .btn-light:hover {
+    background-color: #34495e;
+  }
+
+  .btn-dark:hover {
+    background-color: #7f8c8d;
+  }
+
+
+  .travel-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .travel-icons i {
+    font-size: 2.5em;
+    margin: 0 15px;
+    color: #2c3e50;
+    transition: transform 0.3s ease;
+  }
+
+  .travel-icons i:hover {
+    transform: scale(1.1);
+    color: #3498db;
+  }
+
+  /* Subtle airplane animation */
+  .airplane {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    z-index: 0;
+    animation: fly 20s infinite linear;
+  }
+
+  @keyframes fly {
+    0% {
+      left: -10%;
+    }
+
+    100% {
+      left: 110%;
+    }
+  }
+</style>
+
+<body>
+
+
+  <div class="jumbotron centered">
+    <div class="container">
+      <h1 class="display-3">Travel Tracker</h1>
+      <p class="lead">Explore the World with Ease. Map Your Adventures with Us!</p>
+
+      <a class="btn btn-light btn-lg" href="/register" role="button">Register</a>
+      <a class="btn btn-dark btn-lg" href="/login" role="button">Login</a>
+
+   
+      <div class="travel-icons">
+        <i class="fas fa-globe"></i>
+        <i class="fas fa-map-marker-alt"></i>
+        <i class="fas fa-plane"></i>
+        <i class="fas fa-suitcase"></i>
+      </div>
+    </div>
+  </div>
+
+ 
+  <svg class="airplane" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" stroke="currentColor"
+    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send">
+    <line x1="22" y1="2" x2="11" y2="13"></line>
+    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+  </svg>
+
+  <script src="../index.js"></script>
+</body>
+
+</html>

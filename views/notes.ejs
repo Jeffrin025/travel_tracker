@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <style>
+     
+     body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #83a4d4 0%, #b6fbff 100%);
+    color: #333; 
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.title {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form label {
+    font-weight: bold;
+    color: #333333;
+}
+
+.form input[type="text"],
+.form input[type="date"],
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form textarea {
+    height: 150px;
+}
+
+.form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+}
+
+.notes-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.notes-header {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.note {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.note-title {
+    font-size: 1.2em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.note-content {
+    color: #555555;
+}
+
+    </style>
+</head>
+<body>
+    <h1 class="title">Make notes</h1>
+    <div class="form">
+        <form action="/notes" method="post">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" placeholder="Enter the title"><br>
+            
+            <label for="date">Date:</label><br>
+            <input type="date" id="date" name="date"><br>
+            
+            <label for="location">Location:</label><br>
+<input type="text" id="location" name="location" placeholder="Enter the location"><br>
+
+            
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content" placeholder="Enter the content"></textarea><br>
+            
+            <button type="submit">Save Note</button>
+        </form>
+    </div>
+    <div class="notes-container">
+        <h1 class="notes-header">Notes</h1>
+        <div class="notes">
+            <% notes.forEach(note => { %>
+                <div class="note">
+                    <h4 class="note-title">Title: <%= note.title %></h4>
+                    <p class="note-content">Content: <%= note.content %></p>
+                    <p class="note-date">Date: <%= note.date %></p>
+                    <p class="note-location">Location: <%= note.location %></p>
+                </div>
+            <% }); %>
+            
+        </div>
+    </div>
+
+      
+        
+</body>
+</html>
